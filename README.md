@@ -11,9 +11,12 @@ vcpkg_configure_cmake(
     OPTIONS
         -DDCMTK_USE_CXX11_STL=ON
 )
+
 ./vcpkg remove dcmtk --recurse
+
 ./vcpkg install dcmtk
 
 # build
 cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=C:/Users/ErikZ/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake
+
 cmake --build build
